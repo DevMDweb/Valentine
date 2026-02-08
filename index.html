@@ -102,14 +102,14 @@
             document.getElementById('page' + pageNumber).classList.add('active');
         }
 
-        // Auto-advance from page 2 to page 3 after 7 seconds
+        // Auto-advance from page 2 to page 3 after 15 seconds
         let page2Timer;
         const originalNextPage = nextPage;
         nextPage = function(pageNumber) {
             if (pageNumber === 2) {
                 page2Timer = setTimeout(() => {
                     originalNextPage(3);
-                }, 7000);
+                }, 15000);
             }
             originalNextPage(pageNumber);
         };
